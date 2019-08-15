@@ -49,6 +49,7 @@
             this.AddNewDocument.TabIndex = 1;
             this.AddNewDocument.Text = "Add New Document";
             this.AddNewDocument.UseVisualStyleBackColor = true;
+            this.AddNewDocument.Click += new System.EventHandler(this.AddNewDocument_Click);
             // 
             // MainWindow
             // 

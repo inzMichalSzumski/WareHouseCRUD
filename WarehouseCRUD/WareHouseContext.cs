@@ -12,7 +12,5 @@ namespace WarehouseCRUD
     {
         public DbSet<WareHouseDocument> WareHouseDocuments { get; set; }
         public DbSet<Item> Items { get; set; }
-
-
     }
 }

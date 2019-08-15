@@ -12,8 +12,8 @@ namespace WarehouseCRUD.Objects
         public DateTime? Created { get; set; }
         public int ClientNumber { get; set; }
         public string DocumentName { get; set; }
-        public int SumNetto { get; set; }
-        public int SumBrutto { get; set; }
-        public List<Item> Items { get; set; }
+        public decimal? SumNetto { get; set; }
+        public decimal? SumBrutto { get; set; }
+        public virtual ICollection<Item> Items { get; set; }
     }
 }
