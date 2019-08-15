@@ -57,11 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBService.cs" />
+    <Compile Include="GitHubService.cs" />
     <Compile Include="ItemProperties.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ItemProperties.Designer.cs">
       <DependentUpon>ItemProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201908122119480_InitialCreate.cs" />
     <Compile Include="Migrations\201908122119480_InitialCreate.Designer.cs">
@@ -115,6 +122,9 @@
     <Compile Include="WareHouseContext.cs" />
     <EmbeddedResource Include="ItemProperties.resx">
       <DependentUpon>ItemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

@@ -44,6 +44,7 @@
             this.ItemsTextLabel = new System.Windows.Forms.Label();
             this.AddItemButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ClientNumberTextBox
@@ -190,11 +191,21 @@
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(338, 181);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Double click to delete item";
+            // 
             // DocumentPropertiesWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.AddItemButton);
             this.Controls.Add(this.ItemsTextLabel);
@@ -236,5 +247,6 @@
         private System.Windows.Forms.Label ItemsTextLabel;
         private System.Windows.Forms.Button AddItemButton;
         private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Label label1;
     }
 }

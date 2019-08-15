@@ -23,3 +23,6 @@ C:\Users\szuma\source\repos\WarehouseCRUD\WarehouseCRUD\obj\Debug\WarehouseCRUD.
 C:\Users\szuma\source\repos\WarehouseCRUD\WarehouseCRUD\obj\Debug\WarehouseCRUD.ItemProperties.resources
 C:\Users\szuma\source\repos\WarehouseCRUD\WarehouseCRUD\obj\Debug\WarehouseCRUD.Migrations.add_relationship3.resources
 C:\Users\szuma\source\repos\WarehouseCRUD\WarehouseCRUD\obj\Debug\WarehouseCRUD.Migrations.itemnamechanged.resources
+C:\Users\szuma\source\repos\WarehouseCRUD\WarehouseCRUD\bin\Debug\Octokit.dll
+C:\Users\szuma\source\repos\WarehouseCRUD\WarehouseCRUD\bin\Debug\Octokit.xml
+C:\Users\szuma\source\repos\WarehouseCRUD\WarehouseCRUD\obj\Debug\WarehouseCRUD.LoginWindow.resources

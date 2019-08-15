@@ -14,23 +14,47 @@ namespace WarehouseCRUD
     public partial class MainWindow : Form
     {
         private readonly DBService dBService;
+        private readonly GitHubService gitHubService;
+
         public MainWindow()
         {
-            InitializeComponent();
+            
             dBService = new DBService();
+            gitHubService = new GitHubService();
+            InitializeComponent();
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
             PopulateDocumentsList();
             DocumentsList.DoubleClick += new EventHandler(DocumentsList_MouseDoubleClick);
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.FormClosed += LoginWindow_FormClosed;
+            loginWindow.Show();
+        }
+
+        private async void LoginWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                var dataFromWindow = (LoginWindow)sender;
+                var login = dataFromWindow.login;
+                var password = dataFromWindow.password;
+                var repositoryData = await gitHubService.getRepositoryData(login, password);
+                RepositoryNameLabel.Text = repositoryData.Name;
+                RepositoryCreatedLabel.Text = repositoryData.CreatedAt.ToString();
+                RepositoryCloneUrlLabel.Text = repositoryData.CloneUrl;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         public void PopulateDocumentsList()
         {
             DocumentsList.DisplayMember = "DocumentName";
-            List<WareHouseDocument> MyList = new List<WareHouseDocument>();
-            MyList = dBService.GetAllDocuments();
+            var MyList = dBService.GetAllDocuments();
             DocumentsList.DataSource = MyList;
         }
 
